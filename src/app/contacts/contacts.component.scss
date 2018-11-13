@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.footer-text-color{
+    color: $contrast-color-2;
+}
+
+.link-social{
+    cursor: pointer;
+}
+
+.footer-black{
+    background-color: $background-color;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    align-self: flex-end;
+}
+
+.phone{
+    cursor: pointer;
+}
+
+.fa-map-marker-alt{
+  color: $contrast-color-2;
+}
+
+.title-header{
+  color: $contrast-color-2;
+  text-align: center;
+  font-size: 300%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}

@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.custom-toggler .navbar-toggler-icon {
+    background-color: $background-color;
+    color: $white-color;
+}
+
+.navbar{
+    background: $background-color;
+    color: $white-color;
+    // position: fixed;
+    // top: 0;
+}
+
+.collapsed-menu-item {
+    color: $white-color;
+}
+
+.menu-icon{
+    display: table-cell;
+}
+
+.site-name{
+    color: 	$contrast-color;
+    cursor: pointer;
+}
+
+.navbar-collapse{
+    text-align: right;
+}
+
+.navbar-link{
+    margin-right:10px;
+}
+
+.collapsed-menu-item:hover{
+    text-decoration: none;
+    color: $contrast-color;
+}
+
+.navbar-toggler-icon:hover {
+    color: $contrast-color;
+}

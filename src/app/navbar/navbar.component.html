@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-blue">
+          <a>
+            <span class="site-name" [routerLink]="['/home']">Go Move </span>
+          </a>
+          <button class="navbar-toggler ml-auto custom-toggler"type="button"data-toggle="collapse"
+                  (click)="isCollapsed= !isCollapsed">
+                  <span class="navbar-toggler-icon fa fa-bars menu-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse"[ngbCollapse]="isCollapsed" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="navbar-link">
+                <a class="text-center collapsed-menu-item" [routerLink]="['/about']" >Equipa</a>
+              </li>
+              <li class="navbar-link">
+                <a class="text-center collapsed-menu-item" [routerLink]="['/instalations']">Instalações</a>
+              </li>
+              <li class="navbar-link">
+                <a class="text-center collapsed-menu-item" [routerLink]="['/contacts']">Contactos</a>
+              </li>
+            </ul>
+          </div>
+         </nav>
+        </div>
+      </div>
+ </div>

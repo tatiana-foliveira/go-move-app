@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.section-dark{
+    background-color: $background-color;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logo-img{
+     max-width: 300px;
+}
+
+.home-main {
+    text-align: center;
+    margin-top: 30px;
+    color: $contrast-color;
+}
