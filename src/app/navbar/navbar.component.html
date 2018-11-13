@@ -12,13 +12,13 @@
           <div class="collapse navbar-collapse"[ngbCollapse]="isCollapsed" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="navbar-link">
-                <a class="text-center collapsed-menu-item" [routerLink]="['/about']" >Equipa</a>
+                <a class="text-center collapsed-menu-item" [routerLink]="['/about']" (click)="isCollapsed= true" >Equipa</a>
               </li>
               <li class="navbar-link">
-                <a class="text-center collapsed-menu-item" [routerLink]="['/instalations']">Instalações</a>
+                <a class="text-center collapsed-menu-item" [routerLink]="['/instalations']" (click)="isCollapsed= true" >Instalações</a>
               </li>
               <li class="navbar-link">
-                <a class="text-center collapsed-menu-item" [routerLink]="['/contacts']">Contactos</a>
+                <a class="text-center collapsed-menu-item" [routerLink]="['/contacts']" (click)="isCollapsed= true" >Contactos</a>
               </li>
             </ul>
           </div>
