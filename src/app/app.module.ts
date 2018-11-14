@@ -14,8 +14,10 @@ import { InstalationsComponent } from './instalations/instalations.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatInputModule } from '@angular/material';
 import { ContactsComponent } from './contacts/contacts.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     HomeComponent,
     AboutComponent,
     InstalationsComponent,
-    ContactsComponent
+    ContactsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     AngularFontAwesomeModule,
     MDBBootstrapModule.forRoot(),
     Ng2CarouselamosModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    FormsModule
 
 
   ],
