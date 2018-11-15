@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule  } from '@angular/material/icon';
 
@@ -12,12 +12,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { InstalationsComponent } from './instalations/instalations.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { MatCardModule, MatInputModule } from '@angular/material';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {FormsModule} from '@angular/forms';
     AboutComponent,
     InstalationsComponent,
     ContactsComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,11 +42,14 @@ import {FormsModule} from '@angular/forms';
     Ng2CarouselamosModule,
     MatCardModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
 
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+  ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

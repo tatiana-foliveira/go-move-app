@@ -1,17 +1,19 @@
 @import "../../variables.scss";
 
-.login-card{
-  background-color: $contrast-color-2;
-  color: $white-color;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+.login-label{
+  color: $contrast-color-2;
 }
 
-.mat-form-field-label{
-  color: $white-color;
+.login-message{
+  color: red;
+  padding-left: 10px;
 }
 
-.color-button{
+.submit-button-div{
+  padding-left: 10px;
+}
+
+.submit-button{
   background-color: $contrast-color !important;
 }
+
