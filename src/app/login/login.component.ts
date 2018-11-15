@@ -11,7 +11,10 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  model: ILogin = { userid: 'admin', password: 'admin123' };
+  model: ILogin = {
+    userid: 'admin',
+    password: 'admin123'
+  };
   loginForm: FormGroup;
   message: string;
   returnUrl: string;
@@ -32,13 +35,10 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-
-    // stop here if form is invalid
     if (this.loginForm.invalid) {
         return;
     } else {
       if (this.f.userid.value === this.model.userid && this.f.password.value === this.model.password) {
-        console.log('Login successful');
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('token', this.f.userid.value);
         this.router.navigate([this.returnUrl]);
