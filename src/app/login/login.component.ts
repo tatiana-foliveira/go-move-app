@@ -12,14 +12,16 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
 
   model: ILogin = {
-    userid: 'admin',
-    password: 'admin123'
+    userid: window.btoa('admin'),
+    password: window.btoa('admin123')
   };
   loginForm: FormGroup;
   message: string;
   returnUrl: string;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, public authService: AuthService) { }
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              public authService: AuthService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -38,10 +40,11 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
         return;
     } else {
-      if (this.f.userid.value === this.model.userid && this.f.password.value === this.model.password) {
+      if (this.f.userid.value === window.atob(this.model.userid) && this.f.password.value === window.atob(this.model.password)) {
         localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('token', this.f.userid.value);
+        localStorage.setItem('token', window.btoa(this.f.userid.value));
         this.router.navigate([this.returnUrl]);
+        console.log(localStorage.getItem('token'));
       } else {
         this.message = 'Dados de login inválidos';
       }
