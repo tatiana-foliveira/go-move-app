@@ -41,6 +41,18 @@ export class LoginComponent implements OnInit {
         return;
     } else {
       if (this.f.userid.value === window.atob(this.model.userid) && this.f.password.value === window.atob(this.model.password)) {
+
+        // const ls = new SecureLS({
+        //   encodingType: 'rc4',
+        //   isCompression: false,
+        //   encryptionSecret: 's3cr3t$@1'
+        // });
+        // ls.set('key-name', {
+        //   test: 'secure-ls'
+        // });
+        // const teste = ls.get('key-name');
+        // console.log(teste);
+
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('token', window.btoa(this.f.userid.value));
         this.router.navigate([this.returnUrl]);

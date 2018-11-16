@@ -34,6 +34,7 @@
     "ng2-carouselamos": "^3.2.0",
     "node-sass": "^4.10.0",
     "rxjs": "~6.3.3",
+    "secure-ls": "^1.2.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
